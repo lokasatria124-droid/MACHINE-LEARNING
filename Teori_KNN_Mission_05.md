@@ -318,7 +318,7 @@ Hal penting yang perlu diingat:
 
 **Jawab:**
 
-1. Arti K pada KNNK adalah jumlah tetangga terdekat yang digunakan oleh algoritma untuk menentukan kelas dari data baru berdasarkan suara mayoritas (majority vote).
+1. Arti 'K' pada KNN 'K' adalah jumlah tetangga terdekat yang digunakan oleh algoritma untuk menentukan kelas dari data baru berdasarkan suara mayoritas (majority vote).
 2. Alasan Scaling Penting pada KNN Karena KNN mengukur jarak (misalnya Euclidean Distance). Tanpa scaling, fitur dengan rentang nilai besar akan mendominasi perhitungan jarak dan mengabaikan fitur dengan rentang nilai kecil, meskipun fitur kecil tersebut penting.
 3. Dampak jika K Terlalu Kecil (misal $K = 1$)
    Keputusan model sangat bergantung pada 1 sampel terdekat saja, sehingga model menjadi sangat sensitif terhadap noise atau outlier dan rentang mengalami overfitting.
