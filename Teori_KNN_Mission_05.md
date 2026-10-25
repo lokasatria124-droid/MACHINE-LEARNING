@@ -317,12 +317,17 @@ Hal penting yang perlu diingat:
 5. Mengapa nilai K terbaik tidak selalu sama untuk semua dataset?
 
 **Jawab:**
+1. **Arti `K` pada KNN**
+   `K` adalah jumlah tetangga terdekat yang digunakan oleh algoritma untuk menentukan kelas dari data baru berdasarkan suara mayoritas (*majority vote*).
 
-1. Arti 'K' pada KNN 'K' adalah jumlah tetangga terdekat yang digunakan oleh algoritma untuk menentukan kelas dari data baru berdasarkan suara mayoritas (majority vote).
-2. Alasan Scaling Penting pada KNN Karena KNN mengukur jarak (misalnya Euclidean Distance). Tanpa scaling, fitur dengan rentang nilai besar akan mendominasi perhitungan jarak dan mengabaikan fitur dengan rentang nilai kecil, meskipun fitur kecil tersebut penting.
-3. Dampak jika K Terlalu Kecil (misal $K = 1$)
-   Keputusan model sangat bergantung pada 1 sampel terdekat saja, sehingga model menjadi sangat sensitif terhadap noise atau outlier dan rentang mengalami overfitting.
-4. Dampak jika K Terlalu Besar
-   Keputusan model menjadi terlalu umum (underfitting), sehingga pola lokal atau batas antar-kelas yang detail bisa hilang karena terpengaruh oleh mayoritas data secara keseluruhan.
-5. Alasan Nilai K Terbaik Berbeda pada Setiap Dataset
-   Nilai K yang optimal bergantung pada struktur data, jumlah sampel, kerapatan data, serta tingkat noise pada dataset tersebut. Oleh karena itu, nilai K terbaik harus dicoba dan dievaluasi (misalnya melalui Grid Search atau Cross-Validation).
+2. **Alasan Scaling Penting pada KNN**
+   Karena KNN mengukur jarak (misalnya Euclidean Distance). Tanpa scaling, fitur dengan rentang nilai besar akan mendominasi perhitungan jarak dan mengabaikan fitur dengan rentang nilai kecil, meskipun fitur kecil tersebut penting.
+
+3. **Dampak jika K Terlalu Kecil (misal K = 1)**
+   Keputusan model sangat bergantung pada 1 sampel terdekat saja, sehingga model menjadi sangat sensitif terhadap *noise* atau *outlier* dan rentan mengalami *overfitting*.
+
+4. **Dampak jika K Terlalu Besar**
+   Keputusan model menjadi terlalu umum (*underfitting*), sehingga pola lokal atau batas antar-kelas yang detail bisa hilang karena terpengaruh oleh mayoritas data secara keseluruhan.
+
+5. **Alasan Nilai K Terbaik Berbeda pada Setiap Dataset**
+   Nilai K yang optimal bergantung pada struktur data, jumlah sampel, kerapatan data, serta tingkat *noise* pada dataset tersebut. Oleh karena itu, nilai K terbaik harus dicoba dan dievaluasi (misalnya melalui *Grid Search* atau *Cross-Validation*).
